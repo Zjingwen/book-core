@@ -1,0 +1,15 @@
+{
+  "name": "book-core",
+  "version": "1.0.0",
+  "description": "自动剪辑读书视频",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ffcreator": "^7.5.8"
+  }
+}
