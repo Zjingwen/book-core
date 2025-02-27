@@ -1,9 +1,9 @@
 import path from "path";
-import { FFCreator, FFScene, FFAlbum, FFAudio } from "ffcreator";
+import { FFCreator, FFScene, FFAlbum, FFAudio, FFVideo } from "ffcreator";
 
 const cacheDir = path.join(path.resolve(), "cache/");
 const outputDir = path.join(path.resolve(), "output/");
-const output = outputDir + "test.mp4";
+const output = outputDir + "test-1.mp4";
 
 const creator = new FFCreator({
   cacheDir, // 缓存目录
@@ -18,8 +18,17 @@ const creator = new FFCreator({
 });
 
 const scene = new FFScene();
-scene.setBgColor("#00ff00"); // 设置背景色
+scene.setBgColor("#fff"); // 设置背景色
 scene.setDuration(3.5); // 设置停留时长
+
+const fimage = new FFVideo({
+  path: path.join(path.resolve(), "resources/71122-537102350_small.mp4"),
+  width: 1920 * 2,
+  height: 1080 * 2,
+  x: 0,
+  y: 0,
+});
+scene.addChild(fimage);
 
 const list = [
   path.join(path.resolve(), "resources/1.jpg"),
@@ -50,15 +59,14 @@ const album = new FFAlbum({
 album.setTransition("fadeIn"); // 设置相册切换动画
 album.setDuration(0.1); // 设置单张停留时长
 album.setTransTime(0.1); // 设置单张动画时长
-
 scene.addChild(album);
+
 const audio1 = new FFAudio({
   ss: "00:00:00", // 开始时间
   to: "00:00:02", // 结束时间
   fadeOut: 2,
   path: path.join(path.resolve(), "resources/a.MP3"),
 });
-
 scene.addAudio(audio1);
 scene.addAudio({
   path: path.join(path.resolve(), "resources/1.mp3"),
