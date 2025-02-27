@@ -12,6 +12,7 @@
   "dependencies": {
     "crypto-js": "^4.2.0",
     "ffcreator": "^7.5.8",
+    "fluent-ffmpeg": "^2.1.3",
     "node-fetch": "^2.7.0"
   }
 }
