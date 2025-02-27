@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ffcreator": "^7.5.8"
+    "crypto-js": "^4.2.0",
+    "ffcreator": "^7.5.8",
+    "node-fetch": "^2.7.0"
   }
 }

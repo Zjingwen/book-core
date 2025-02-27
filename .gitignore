@@ -4,6 +4,8 @@ log
 package-lock.json
 output/*
 !output/.gitkeep
+audio/*
+!audio/.gitkeep
 
 # local env files
 .env.local
